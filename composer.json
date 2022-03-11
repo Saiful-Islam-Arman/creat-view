@@ -1,0 +1,14 @@
+{
+    "name": "day-11/day-11",
+    "description": "New project php real state",
+    "type": "newproject",
+    "license": "",
+    "keywords": [],
+    "require": {},
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app//"
+        }
+    }
+}
