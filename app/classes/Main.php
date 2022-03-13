@@ -3,14 +3,20 @@ namespace App\classes;
 class Main
 {
 
-    public $firstName;
-    public $lastName;
-    public $fullName;
+    public $firstNumber;
+    public $lastNumber;
+    public $operator;
 
     public function __construct($data = null)
     {
-        $this->firstName = $data['first_name'];
-        $this->lastName = $data['last_name'];
+        $this->firstNumber = $data['first_number'];
+        $this->lastNumber = $data['last_number'];
+        $this->operator = $data['operator'];
+        // $this->add = $data['add'];
+        // $this->sub = $data['sub'];
+        // $this->mult = $data['mult'];
+        // $this->divide = $data['divide'];
+        // $this->modul = $data['modul'];
     }
 
     public function index()
@@ -20,8 +26,24 @@ class Main
 
     public function makeFullName()
     {
-        $this->fullName = $this->firstName ." ". $this->lastName;
-        echo $this->fullName;
+        switch($this->operator)
+        {
+            case("+"):
+                echo " $this->firstNumber" + "$this->lastNumber";
+            break;
+            case("-"):
+                echo " $this->firstNumber" - "$this->lastNumber";
+            break;
+            case("*"):
+                echo " $this->firstNumber" * "$this->lastNumber";
+            break;
+            case("/"):
+                echo " $this->firstNumber" / "$this->lastNumber";
+            break;
+            case("%"):
+                echo " $this->firstNumber" % "$this->lastNumber";
+            break;
+        }
     }
 }
 
